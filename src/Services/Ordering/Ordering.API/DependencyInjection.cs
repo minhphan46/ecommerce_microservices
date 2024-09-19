@@ -13,14 +13,14 @@ namespace Ordering.API
 
         public static WebApplication UseApiServices(this WebApplication app)
         {
-            app.MapCarter();
+            // app.MapCarter();
 
             app.UseExceptionHandler(options => { });
-            app.UseHealthChecks("/health",
-                new HealthCheckOptions
-                {
-                    ResponseWriter = UIResponseWriter.WriteHealthCheckUIResponse
-                });
+            //app.UseHealthChecks("/health",
+            //    new HealthCheckOptions
+            //    {
+            //        ResponseWriter = UIResponseWriter.WriteHealthCheckUIResponse
+            //    });
 
             return app;
         }
